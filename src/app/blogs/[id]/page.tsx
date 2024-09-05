@@ -68,7 +68,7 @@ const BlogDetailsPage: React.FC<BlogDetailsPageProps> = ({ params }) => {
   // Convert params.id to a number for comparison
   const blogId = parseInt(params.id);
 
-  // Find the blog with the matching id...... ....
+  // Find the blog with the matching id
   const blog = blogs.find(blog => blog.id === blogId);
 
   if (!blog) {

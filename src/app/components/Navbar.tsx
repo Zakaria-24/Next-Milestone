@@ -12,6 +12,11 @@ interface LinkType {
 export default function Navbar() {
   // Define links array with type LinkType[]
   const navLinks: LinkType[] = [
+    
+    {
+      title: "Home",
+      path: "/",
+    },
     {
       title: "About",
       path: "/about",
@@ -28,12 +33,17 @@ export default function Navbar() {
       title: "Blogs",
       path: "/blogs",
     },
+    {
+      title: "Dashboard",
+      path: "/dashboard",
+    },
   ];
 const pathName = usePathname()
 if(pathName.includes("dashboard"))
   return (
     <div className='bg-green-400'>
       <h1>dashboard layout _ Navbar</h1>
+      <Link href="/">Back Home</Link>
     </div>
   )
 
@@ -70,7 +80,7 @@ if(pathName.includes("dashboard"))
             ))}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link  href="/" className="btn btn-ghost text-xl">daisyUI</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

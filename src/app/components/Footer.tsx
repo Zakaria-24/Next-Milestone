@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 
 interface linkType {
     title : string,
@@ -21,6 +24,14 @@ export default function Footer() {
       path: "/contacts",
     },
   ];
+
+  const pathName = usePathname()
+  if(pathName.includes("dashboard"))
+    return (
+      <div className='bg-green-400'>
+        <h1>dashboard layout _ Footer</h1>
+      </div>
+    )
 
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">

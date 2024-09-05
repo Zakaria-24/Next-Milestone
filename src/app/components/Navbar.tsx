@@ -1,5 +1,7 @@
+"use client"
+
 import Link from 'next/link';
-import React from 'react';
+ import { usePathname } from 'next/navigation'
 
 // Define the type for a single link
 interface LinkType {
@@ -27,6 +29,13 @@ export default function Navbar() {
       path: "/blogs",
     },
   ];
+const pathName = usePathname()
+if(pathName.includes("dashboard"))
+  return (
+    <div className='bg-green-400'>
+      <h1>dashboard layout _ Navbar</h1>
+    </div>
+  )
 
   return (
     <div className="navbar bg-base-100">

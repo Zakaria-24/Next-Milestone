@@ -34,6 +34,10 @@ export default function Navbar() {
       path: "/blogs",
     },
     {
+      title: "Post",
+      path: "/posts",
+    },
+    {
       title: "Dashboard",
       path: "/dashboard",
     },

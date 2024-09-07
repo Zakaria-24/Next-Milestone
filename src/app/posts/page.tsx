@@ -1,4 +1,5 @@
 import { getPosts } from "@/services/postApi"
+import Link from "next/link"
 
 
 export default async function PostsPage() {
@@ -15,6 +16,7 @@ export default async function PostsPage() {
             <h1>{id}</h1>
             <h1>{title}</h1>
             <p>{body}</p>
+            <button className="mt-4"><Link href={`posts/${id}`} className="text-lg font-semibold p-2 rounded-lg bg-lime-600">View Details</Link></button>
         </div>
       ))
     }

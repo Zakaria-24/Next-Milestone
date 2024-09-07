@@ -16,10 +16,6 @@ export default function Footer() {
       path: "/about",
     },
     {
-      title: "Services",
-      path: "/services",
-    },
-    {
       title: "Contacts",
       path: "/contacts",
     },

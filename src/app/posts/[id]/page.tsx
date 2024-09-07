@@ -1,3 +1,5 @@
+import { FC } from 'react';
+import Link from "next/link";
 
 // Define the type for the post data
 interface PostData {
@@ -23,7 +25,7 @@ const getDetails = async (id: string): Promise<PostData> => {
 }
 
 // Define the component with TypeScript
-const PostDetailsPage: React.FC<PostDetailsPageProps> = async ({ params }) => {
+const PostDetailsPage: FC<PostDetailsPageProps> = async ({ params }) => {
     const { title, body } = await getDetails(params.id);
 
     return (
@@ -32,6 +34,7 @@ const PostDetailsPage: React.FC<PostDetailsPageProps> = async ({ params }) => {
             <div className="border-2 p-4 mt-4 bg-lime-50">
                 <h3>Title: {title}</h3>
                 <p>Description: {body}</p>
+                <button className="mt-4"><Link href='/posts' className="text-lg font-semibold p-2 rounded-lg bg-lime-600">Back page</Link></button>
             </div>
         </div>
     );

@@ -22,10 +22,6 @@ export default function Navbar() {
       path: "/about",
     },
     {
-      title: "Services",
-      path: "/services",
-    },
-    {
       title: "Contacts",
       path: "/contacts",
     },

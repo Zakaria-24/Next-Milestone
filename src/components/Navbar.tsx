@@ -41,6 +41,7 @@ export default function Navbar() {
       title: "Dashboard",
       path: "/dashboard",
     },
+    
   ];
 const pathName = usePathname()
 if(pathName.includes("dashboard"))

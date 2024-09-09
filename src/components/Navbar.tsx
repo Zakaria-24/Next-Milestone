@@ -30,7 +30,7 @@ export default function Navbar() {
       path: "/blogs",
     },
     {
-      title: "Post",
+      title: "Posts",
       path: "/posts",
     },
     {
